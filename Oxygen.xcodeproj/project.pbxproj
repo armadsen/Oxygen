@@ -11,7 +11,10 @@
 		9DD6B1BD1B5F4186000AB46E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DD6B1B61B5F4186000AB46E /* Main.storyboard */; };
 		9DD6B1BE1B5F4186000AB46E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DD6B1B81B5F4186000AB46E /* Images.xcassets */; };
 		9DD6B1C01B5F4186000AB46E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD6B1BB1B5F4186000AB46E /* AppDelegate.swift */; };
-		9DD6B1C11B5F4186000AB46E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD6B1BC1B5F4186000AB46E /* ViewController.swift */; };
+		9DD6B1C11B5F4186000AB46E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD6B1BC1B5F4186000AB46E /* MainViewController.swift */; };
+		9DD6B1C91B5F4206000AB46E /* ORSSerial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DD6B1C81B5F41FD000AB46E /* ORSSerial.framework */; };
+		9DD6B1CA1B5F4206000AB46E /* ORSSerial.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9DD6B1C81B5F41FD000AB46E /* ORSSerial.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9DD6B1CF1B5F423D000AB46E /* OxygenMonitorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD6B1CE1B5F423D000AB46E /* OxygenMonitorController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -22,7 +25,35 @@
 			remoteGlobalIDString = 9DD6B1921B5F4158000AB46E;
 			remoteInfo = Oxygen;
 		};
+		9DD6B1C71B5F41FD000AB46E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9DD6B1C31B5F41FD000AB46E /* ORSSerialPort.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9DCA89121A2BB106009285EB;
+			remoteInfo = ORSSerial;
+		};
+		9DD6B1CB1B5F4206000AB46E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9DD6B1C31B5F41FD000AB46E /* ORSSerialPort.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 9DCA89111A2BB106009285EB;
+			remoteInfo = ORSSerial;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9DD6B1CD1B5F4206000AB46E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				9DD6B1CA1B5F4206000AB46E /* ORSSerial.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		9DD6B1931B5F4158000AB46E /* Oxygen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Oxygen.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -33,7 +64,9 @@
 		9DD6B1B81B5F4186000AB46E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9DD6B1B91B5F4186000AB46E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9DD6B1BB1B5F4186000AB46E /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9DD6B1BC1B5F4186000AB46E /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9DD6B1BC1B5F4186000AB46E /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		9DD6B1C31B5F41FD000AB46E /* ORSSerialPort.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ORSSerialPort.xcodeproj; path = "Frameworks/ORSSerialPort/Framework Project/ORSSerialPort.xcodeproj"; sourceTree = "<group>"; };
+		9DD6B1CE1B5F423D000AB46E /* OxygenMonitorController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OxygenMonitorController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DD6B1C91B5F4206000AB46E /* ORSSerial.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +93,7 @@
 			children = (
 				9DD6B1BA1B5F4186000AB46E /* Sources */,
 				9DD6B1B51B5F4186000AB46E /* Resources */,
+				9DD6B1C21B5F41F6000AB46E /* Frameworks */,
 				9DD6B1A81B5F4159000AB46E /* OxygenTests */,
 				9DD6B1941B5F4158000AB46E /* Products */,
 			);
@@ -104,9 +139,26 @@
 			isa = PBXGroup;
 			children = (
 				9DD6B1BB1B5F4186000AB46E /* AppDelegate.swift */,
-				9DD6B1BC1B5F4186000AB46E /* ViewController.swift */,
+				9DD6B1BC1B5F4186000AB46E /* MainViewController.swift */,
+				9DD6B1CE1B5F423D000AB46E /* OxygenMonitorController.swift */,
 			);
 			path = Sources;
+			sourceTree = "<group>";
+		};
+		9DD6B1C21B5F41F6000AB46E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9DD6B1C31B5F41FD000AB46E /* ORSSerialPort.xcodeproj */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9DD6B1C41B5F41FD000AB46E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9DD6B1C81B5F41FD000AB46E /* ORSSerial.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,10 +171,12 @@
 				9DD6B18F1B5F4158000AB46E /* Sources */,
 				9DD6B1901B5F4158000AB46E /* Frameworks */,
 				9DD6B1911B5F4158000AB46E /* Resources */,
+				9DD6B1CD1B5F4206000AB46E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				9DD6B1CC1B5F4206000AB46E /* PBXTargetDependency */,
 			);
 			name = Oxygen;
 			productName = Oxygen;
@@ -177,6 +231,12 @@
 			mainGroup = 9DD6B18A1B5F4158000AB46E;
 			productRefGroup = 9DD6B1941B5F4158000AB46E /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 9DD6B1C41B5F41FD000AB46E /* Products */;
+					ProjectRef = 9DD6B1C31B5F41FD000AB46E /* ORSSerialPort.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				9DD6B1921B5F4158000AB46E /* Oxygen */,
@@ -184,6 +244,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		9DD6B1C81B5F41FD000AB46E /* ORSSerial.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ORSSerial.framework;
+			remoteRef = 9DD6B1C71B5F41FD000AB46E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		9DD6B1911B5F4158000AB46E /* Resources */ = {
@@ -209,7 +279,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9DD6B1C11B5F4186000AB46E /* ViewController.swift in Sources */,
+				9DD6B1C11B5F4186000AB46E /* MainViewController.swift in Sources */,
+				9DD6B1CF1B5F423D000AB46E /* OxygenMonitorController.swift in Sources */,
 				9DD6B1C01B5F4186000AB46E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -229,6 +300,11 @@
 			isa = PBXTargetDependency;
 			target = 9DD6B1921B5F4158000AB46E /* Oxygen */;
 			targetProxy = 9DD6B1A61B5F4159000AB46E /* PBXContainerItemProxy */;
+		};
+		9DD6B1CC1B5F4206000AB46E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ORSSerial;
+			targetProxy = 9DD6B1CB1B5F4206000AB46E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

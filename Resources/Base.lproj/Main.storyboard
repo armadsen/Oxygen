@@ -671,7 +671,63 @@
                     <view key="view" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="a4X-Su-AZE">
+                                <rect key="frame" x="18" y="233" width="47" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="SpO2: " id="A93-vQ-2Uw">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="P4x-v4-gO8">
+                                <rect key="frame" x="18" y="208" width="74" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Heart Rate:" id="uKG-MC-0bC">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="7P1-Ge-Le7">
+                                <rect key="frame" x="71" y="233" width="38" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="vKv-V9-gUd">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="qP3-sF-6hA">
+                                <rect key="frame" x="96" y="208" width="38" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="g8e-1q-nlb">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="EhG-Sd-emM" customClass="CPTGraphHostingView">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="200"/>
+                            </customView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="EhG-Sd-emM" firstAttribute="top" secondItem="P4x-v4-gO8" secondAttribute="bottom" constant="8" symbolic="YES" id="Nuv-7y-ANX"/>
+                            <constraint firstAttribute="trailing" secondItem="EhG-Sd-emM" secondAttribute="trailing" id="Ts6-Rb-Qav"/>
+                            <constraint firstItem="7P1-Ge-Le7" firstAttribute="baseline" secondItem="a4X-Su-AZE" secondAttribute="baseline" id="VLI-ht-jp9"/>
+                            <constraint firstItem="a4X-Su-AZE" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" symbolic="YES" id="d7S-Aq-SZJ"/>
+                            <constraint firstItem="P4x-v4-gO8" firstAttribute="top" secondItem="a4X-Su-AZE" secondAttribute="bottom" constant="8" symbolic="YES" id="fsG-6w-Ut9"/>
+                            <constraint firstItem="qP3-sF-6hA" firstAttribute="leading" secondItem="P4x-v4-gO8" secondAttribute="trailing" constant="8" symbolic="YES" id="j0f-S9-foU"/>
+                            <constraint firstItem="a4X-Su-AZE" firstAttribute="leading" secondItem="P4x-v4-gO8" secondAttribute="leading" id="llj-It-x4s"/>
+                            <constraint firstItem="P4x-v4-gO8" firstAttribute="baseline" secondItem="qP3-sF-6hA" secondAttribute="baseline" id="pBI-2z-G72"/>
+                            <constraint firstItem="7P1-Ge-Le7" firstAttribute="leading" secondItem="a4X-Su-AZE" secondAttribute="trailing" constant="10" id="rQ9-LG-VXW"/>
+                            <constraint firstItem="EhG-Sd-emM" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="rUK-kE-1rx"/>
+                            <constraint firstItem="a4X-Su-AZE" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" symbolic="YES" id="tI8-NB-Jat"/>
+                            <constraint firstAttribute="bottom" secondItem="EhG-Sd-emM" secondAttribute="bottom" id="x5Z-0z-AKk"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="graphView" destination="EhG-Sd-emM" id="AXQ-b3-f7k"/>
+                        <outlet property="heartRateLabel" destination="qP3-sF-6hA" id="gug-yW-kQL"/>
+                        <outlet property="oxygenLabel" destination="7P1-Ge-Le7" id="6sW-RQ-gAy"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>

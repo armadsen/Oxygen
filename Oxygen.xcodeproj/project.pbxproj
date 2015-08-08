@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D84CE361B62B6EF00F764ED /* Observable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D84CE321B62B6E000F764ED /* Observable.framework */; };
+		9D84CE371B62B6EF00F764ED /* Observable.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9D84CE321B62B6E000F764ED /* Observable.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9D84CE3E1B63070100F764ED /* CorePlot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D84CE3D1B63070100F764ED /* CorePlot.framework */; };
+		9D84CE431B63520B00F764ED /* CorePlot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D84CE3D1B63070100F764ED /* CorePlot.framework */; };
+		9D84CE441B63520B00F764ED /* CorePlot.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9D84CE3D1B63070100F764ED /* CorePlot.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9DD6B1AC1B5F4159000AB46E /* OxygenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD6B1AB1B5F4159000AB46E /* OxygenTests.swift */; };
 		9DD6B1BD1B5F4186000AB46E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DD6B1B61B5F4186000AB46E /* Main.storyboard */; };
 		9DD6B1BE1B5F4186000AB46E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DD6B1B81B5F4186000AB46E /* Images.xcassets */; };
@@ -48,7 +53,9 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				9D84CE441B63520B00F764ED /* CorePlot.framework in Embed Frameworks */,
 				9DD6B1CA1B5F4206000AB46E /* ORSSerial.framework in Embed Frameworks */,
+				9D84CE371B62B6EF00F764ED /* Observable.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -56,6 +63,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9D84CE321B62B6E000F764ED /* Observable.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Observable.framework; path = Carthage/Build/Mac/Observable.framework; sourceTree = "<group>"; };
+		9D84CE3D1B63070100F764ED /* CorePlot.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CorePlot.framework; sourceTree = "<group>"; };
 		9DD6B1931B5F4158000AB46E /* Oxygen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Oxygen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DD6B1A51B5F4159000AB46E /* OxygenTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OxygenTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DD6B1AA1B5F4159000AB46E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -74,7 +83,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D84CE3E1B63070100F764ED /* CorePlot.framework in Frameworks */,
 				9DD6B1C91B5F4206000AB46E /* ORSSerial.framework in Frameworks */,
+				9D84CE431B63520B00F764ED /* CorePlot.framework in Frameworks */,
+				9D84CE361B62B6EF00F764ED /* Observable.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,6 +160,8 @@
 		9DD6B1C21B5F41F6000AB46E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9D84CE3D1B63070100F764ED /* CorePlot.framework */,
+				9D84CE321B62B6E000F764ED /* Observable.framework */,
 				9DD6B1C31B5F41FD000AB46E /* ORSSerialPort.xcodeproj */,
 			);
 			name = Frameworks;
@@ -406,6 +420,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+					"$(PROJECT_DIR)/Carthage/Checkouts/core-plot/build/Release",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -418,6 +438,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+					"$(PROJECT_DIR)/Carthage/Checkouts/core-plot/build/Release",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
